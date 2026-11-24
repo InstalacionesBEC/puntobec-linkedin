@@ -20,3 +20,7 @@
 - Tareas: la antigua "diaria 08:25" pasa a ser la del lunes (06:00). Se han creado las de martes a domingo, con inicio 3 h antes de cada publicación. Todas siguen INSTRUCCIONES.md.
 - Gráfico obligatorio: scripts/tarjeta.py (PNG 1080x1350, estilos titular, lista, comparación y dato). Se ha probado la subida con file_upload en el editor de LinkedIn: funciona desde la carpeta de trabajo de la sesión, pero NO desde datos/ (Chrome no tiene permiso para leer esa carpeta). Se ha probado también el texto alternativo. El borrador de prueba se ha descartado sin publicar.
 - PENDIENTE: ninguna ejecución automática ha usado Chrome todavía. La primera prueba real será la del martes 24/11 a las ~19:39.
+
+## 2026-11-24 · migración a la nube (sesión interactiva)
+- Verificado desde la nube (sin publicar): Zapier + LinkedIn conectados (conexión "Ciprian Corneliu Bec"); PuntoBEC (145510157) seleccionable; lectura de publicaciones y estadísticas de PuntoBEC por API GET funciona (0 publicaciones); raw.githubusercontent.com accesible; www.linkedin.com NO accesible desde la nube (falta permitirlo en la red del entorno).
+- Las 7 publicaciones programadas en LinkedIn ya se habían cancelado. Instrucciones v3 (nube) en INSTRUCCIONES.md.
