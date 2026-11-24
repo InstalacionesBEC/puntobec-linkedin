@@ -38,32 +38,35 @@ Temas:
 - paz mental y gestión de la sobrecarga;
 - libertad de tiempo y relación entre trabajo, dinero y bienestar.
 
-**A) Publicaciones de LinkedIn de terceros (obligatorio)**
-1. Descubre candidatas con WebSearch, con prioridad a las últimas 24–48 h. Ejemplos de consulta:
-   - `site:linkedin.com/posts <tema>`
-   - `site:es.linkedin.com/posts <tema>`
-   - `linkedin.com/posts <tema> <mes año>`
-   - `"linkedin" <tema> viral`
+**MODO GRATUITO (decisión del usuario, 24/11/2026).** LinkedIn rechaza con error 403 las conexiones desde la nube cuando no hay sesión iniciada. Por eso **no se analizan publicaciones de terceros en LinkedIn**.
+- No intentes saltar ese bloqueo: nada de cambiar el user-agent, usar proxies, scrapers ni servicios de terceros.
+- La investigación se basa en actualidad verificable y en conversaciones públicas accesibles.
+- Cada registro debe decir literalmente: "Sin análisis de publicaciones de LinkedIn de terceros (modo gratuito)".
 
-   Haz al menos 6 consultas en español y alguna en inglés.
-2. Abre cada candidata con WebFetch (sigue la redirección a es.linkedin.com) y anota los datos **visibles**:
-   - enlace, autor y antigüedad mostrada;
-   - idea principal;
-   - reacciones, comentarios y republicaciones;
-   - tipo y calidad de los comentarios visibles;
-   - seguidores del autor, si aparecen;
-   - **hora UTC** de la captura.
-3. Si linkedin.com da `ENOTFOUND`, es que el dominio no está permitido en la red del entorno. Regístralo como **INCIDENCIA DE RED** y aplica la regla de mínimos.
-4. Si no hay ejemplos suficientes de 24–48 h, amplía hasta 7 días y déjalo escrito.
+**A) Noticias y estudios de actualidad (obligatorio)**
+- Con WebSearch, haz al menos 8 consultas en español y en inglés sobre los temas, con prioridad a las últimas 24–48 h y ampliando hasta 7 días si hace falta (déjalo escrito). Ejemplos:
+  - "estudio productividad noviembre 2026";
+  - "burnout encuesta trabajadores";
+  - "decision fatigue study";
+  - "emprendedores España informe";
+  - "semana laboral 4 días";
+  - "salud mental trabajo datos".
+- Abre las candidatas con WebFetch y verifícalas en su **fuente original**: el estudio, el organismo o el medio que publicó primero.
+- Si WebFetch no puede abrir la fuente (dominio no permitido o bloqueo), confirma el dato con al menos 2 resultados independientes de WebSearch. Márcalo como "verificado solo por buscador" y sé prudente al citarlo.
 
-**B) Noticias de actualidad**
-- Busca con WebSearch noticias de las últimas 48 h relacionadas con los temas.
-- Verifica cada una en su fuente original con WebFetch.
-- No fuerces una noticia: úsala solo si aporta valor a la audiencia de PuntoBEC.
+**B) Conversación pública e interacción observable**
+Busca señales de que el tema genera debate ahora mismo y anota las cifras **visibles**, con la hora UTC de la captura:
+- Hacker News: `https://hn.algolia.com/api/v1/search_by_date?query=<tema>&tags=story` (puntos y comentarios).
+- Reddit, si es accesible: `https://www.reddit.com/r/<sub>/search.json?q=<tema>&sort=top&t=week` (votos y comentarios).
+- Comentarios en los medios.
+- Cualquier otra fuente pública que se abra sin sesión.
+
+Si una fuente no es accesible, anótalo y sigue sin ella. No inventes cifras. Las fuentes en inglés valen como señal de tendencia, pero el post se escribe para la audiencia hispanohablante.
 
 **C) Regla de mínimos (obligatoria)**
-- Para publicar hacen falta **al menos 3 publicaciones de LinkedIn de los últimos 7 días, abiertas, con cifras observadas**.
-- Si no las consigues, NO publiques: registra "INVESTIGACIÓN INSUFICIENTE" con el motivo y deja el hueco sin publicar.
+- Para publicar hacen falta **al menos 3 fuentes de actualidad de los últimos 7 días, verificadas** (fuente original o 2 resultados independientes).
+- Al menos una debe tener **interacción o debate observable** (cifras o comentarios visibles).
+- Si no se cumple, NO publiques: registra "INVESTIGACIÓN INSUFICIENTE" con el motivo y deja el hueco sin publicar.
 - Nunca uses los borradores de reserva para llenar el hueco.
 
 **D) Selección**
@@ -153,7 +156,7 @@ Actualiza `datos/publicaciones/AAAA-MM-DD.md` con el estado final: PUBLICADA, SI
 Añade a `datos/registro.md`:
 ```
 ## AAAA-MM-DD (día) · inicio HH:MM → publicación HH:MM (Madrid) · NUBE
-- Fuentes consultadas: consultas de búsqueda, publicaciones de LinkedIn abiertas (n.º y enlaces) y noticias (enlaces).
+- Fuentes consultadas: consultas de búsqueda, noticias y estudios (enlaces; fuente original o "verificado solo por buscador") y señales de conversación (fuente, cifras visibles y hora UTC). Incluye: "Sin análisis de publicaciones de LinkedIn de terceros (modo gratuito)".
 - Ventana: 24-48 h o ampliada a 7 días (motivo).
 - Tema seleccionado y motivo, con las puntuaciones.
 - Enfoque original de PuntoBEC:

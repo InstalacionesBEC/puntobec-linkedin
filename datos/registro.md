@@ -24,3 +24,4 @@
 ## 2026-11-24 · migración a la nube (sesión interactiva)
 - Verificado desde la nube (sin publicar): Zapier + LinkedIn conectados (conexión "Ciprian Corneliu Bec"); PuntoBEC (145510157) seleccionable; lectura de publicaciones y estadísticas de PuntoBEC por API GET funciona (0 publicaciones); raw.githubusercontent.com accesible; www.linkedin.com NO accesible desde la nube (falta permitirlo en la red del entorno).
 - Las 7 publicaciones programadas en LinkedIn ya se habían cancelado. Instrucciones v3 (nube) en INSTRUCCIONES.md.
+- 24/11 ~17:10: LinkedIn devuelve 403 a la nube. El usuario elige el MODO GRATUITO: investigación con noticias y estudios verificados y conversación pública (HN, Reddit…), sin análisis de publicaciones de LinkedIn de terceros. Instrucciones actualizadas.
