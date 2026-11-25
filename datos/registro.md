@@ -30,3 +30,14 @@
 - Causas: (1) la rutina no pudo escribir en GitHub (403: la app Claude de GitHub no tiene permiso de escritura en el repositorio), así que no había URL pública para la imagen; (2) declaró la investigación insuficiente en 98 s, con 1 fuente verificada (HN "burnout from agentic coding", 7 puntos y 9 comentarios), sin abrir otras candidatas de noviembre de 2026 que tenía en el buscador.
 - Corrección (25/11, sesión interactiva): investigación mínima obligatoria (30 min, 12 consultas, 10 fuentes abiertas) antes de declararla insuficiente, y comprobación de escritura en GitHub al empezar. Pendiente: instalar la app Claude de GitHub en el repositorio.
 - Zapier: 0 tareas usadas.
+
+## 2026-11-25 (miércoles) · inicio 11:34 → publicación 14:33 (Madrid) · NUBE
+- Fuentes consultadas: ~30 consultas de búsqueda; ~24 fuentes abiertas (detalle en investigacion/2026-11-25.md). Originales: Adecco Group GWoF 19/11 (comunicado, Fortune, healthnews.pt), Rest of World 19/11 (Hacker News 152 puntos y 84 comentarios, captura 25/11 ~10:36 UTC), Lyra Health 2026 con noticia diario.mx 21/11; Gallup 16/11 como contexto. Reddit y varios medios bloqueados (403). Sin análisis de publicaciones de LinkedIn de terceros (modo gratuito).
+- Ventana: ampliada a 7 días (18-25/11) por falta de estudios en 24-48 h.
+- Tema: quién decide cómo cambia tu trabajo cuando la IA te ahorra tiempo. Puntuación 23/25 (frente a 17, 13 y 12).
+- Enfoque original de PuntoBEC: pauta de decidir por escrito qué hacer con el tiempo recuperado; sin experiencias inventadas.
+- Conversación que se busca provocar: qué pasa con la hora ahorrada (más trabajo, salir antes u otra cosa).
+- Imagen: estilo dato, tema claro, https://raw.githubusercontent.com/InstalacionesBEC/puntobec-linkedin/main/datos/graficos/2026-11-25.png. Corregido scripts/tarjeta.py (glob recursivo; antes no encontraba fuentes y fallaban los acentos).
+- Publicación: VERIFICADA por la respuesta de Zapier (id urn:li:share:7531349357762310144, 14:33 Madrid, imagen sí). No se abrió LinkedIn.
+- Tareas de Zapier usadas hoy: 2.
+- Intervención manual necesaria: no. Nota: push directo a main funcionó.
