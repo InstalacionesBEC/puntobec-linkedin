@@ -25,7 +25,7 @@ LinkedIn no tiene programación nativa a través de la API. Por eso la rutina **
 
 ## PASO 0 · Comprobaciones
 1. Ejecuta `TZ=Europe/Madrid date '+%F %u %H:%M'`. Cada rutina se activa dos veces, en las dos horas UTC posibles, para cubrir el horario de verano y el de invierno. **Continúa solo si el día coincide con el de la rutina y la hora de Madrid está a ±20 min del "Inicio".** Si no, termina en silencio, sin registrar nada.
-2. Con `git pull`, comprueba si existe `datos/publicaciones/AAAA-MM-DD.md` con estado PUBLICADA o EN CURSO. Si existe, termina, para evitar duplicados.
+2. Con `git checkout -B main origin/main && git pull origin main`, comprueba si existe `datos/publicaciones/AAAA-MM-DD.md` con estado PUBLICADA o EN CURSO. Si existe, termina, para evitar duplicados.
 3. Crea ese archivo con `estado: EN CURSO` y la hora de inicio. Haz commit y push (ver "Guardar en el repositorio").
 4. Si la hora de publicación de hoy ya ha pasado o faltan menos de 20 min, registra "EJECUCIÓN TARDÍA: hueco sin publicar" y termina.
 
