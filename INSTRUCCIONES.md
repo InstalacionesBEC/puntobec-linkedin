@@ -1,5 +1,5 @@
 # PuntoBEC · Publicación diaria en LinkedIn (versión NUBE)
-Versión 3 · 24/11/2026. Lo ejecutan las rutinas en la nube de Claude, sin el ordenador del usuario, sin Chrome y sin archivos locales. Idioma de trabajo: español de España.
+Versión 3.1 · 25/11/2026 (investigación y publicación en rutinas separadas). Lo ejecutan las rutinas en la nube de Claude, sin el ordenador del usuario, sin Chrome y sin archivos locales. Idioma de trabajo: español de España.
 
 - **Página:** PuntoBEC, https://www.linkedin.com/company/145510157 (organización 145510157).
 - **Repositorio (esta carpeta):** InstalacionesBEC/puntobec-linkedin. Es público, así que **nunca guardes en él datos personales, tokens ni nada privado**.
@@ -21,11 +21,16 @@ Cada ejecución investiga, selecciona, redacta, diseña, publica y verifica ÚNI
 | Sábado | 08:00 | 11:00 |
 | Domingo | 16:00 | 19:00 |
 
-LinkedIn no tiene programación nativa a través de la API. Por eso la rutina **espera hasta la hora exacta** y entonces publica con Zapier. Las esperas se hacen con `sleep` en tramos de 5 minutos como máximo.
+LinkedIn no tiene programación nativa a través de la API. Por eso cada día hay **DOS rutinas** (desde el 25/11/2026; antes una sola rutina esperaba 3 h con `sleep` y la espera podía cortarse):
 
-## PASO 0 · Comprobaciones
+- **Rutina de INVESTIGACIÓN** (se activa a la hora de "Inicio"): hace los PASOS 0, 1, 2 y 3 y **termina** con `estado: LISTA`. **No espera y no publica.**
+- **Rutina de PUBLICACIÓN** (se activa a la hora de "Publicación"): hace solo el apartado "RUTINA DE PUBLICACIÓN" (PASOS 4 y 5) con lo que dejó lista la de investigación.
+
+**Nunca uses `sleep` largos ni bucles de espera.** Si tu rutina es la de investigación, termina al dejar la publicación LISTA.
+
+## PASO 0 · Comprobaciones (rutina de INVESTIGACIÓN)
 1. Ejecuta `TZ=Europe/Madrid date '+%F %u %H:%M'`. Cada rutina se activa dos veces, en las dos horas UTC posibles, para cubrir el horario de verano y el de invierno. **Continúa solo si el día coincide con el de la rutina y la hora de Madrid está a ±20 min del "Inicio".** Si no, termina en silencio, sin registrar nada.
-2. Con `git checkout -B main origin/main && git pull origin main`, comprueba si existe `datos/publicaciones/AAAA-MM-DD.md` con estado PUBLICADA o EN CURSO. Si existe, termina, para evitar duplicados.
+2. Con `git checkout -B main origin/main && git pull origin main`, comprueba si existe `datos/publicaciones/AAAA-MM-DD.md` con estado PUBLICADA, LISTA, PUBLICANDO o EN CURSO. Si existe, termina, para evitar duplicados.
 3. Crea ese archivo con `estado: EN CURSO` y la hora de inicio. Haz commit y push (ver "Guardar en el repositorio").
 4. Si la hora de publicación de hoy ya ha pasado o faltan menos de 20 min, registra "EJECUCIÓN TARDÍA: hueco sin publicar" y termina.
 
@@ -135,14 +140,34 @@ Antes de elegir, lee `datos/aprendizajes.md` y las 3 últimas publicaciones de `
 3. Ábrela con Read y revísala: texto cortado, solapes, erratas y legibilidad. Si algo falla, corrígelo y vuelve a generarla.
 4. Haz commit y push de la imagen.
 5. Comprueba con WebFetch que la URL pública responde: `https://raw.githubusercontent.com/InstalacionesBEC/puntobec-linkedin/<rama>/datos/graficos/AAAA-MM-DD.png`.
-6. Guarda el texto final, el JSON y la URL de la imagen en `datos/publicaciones/AAAA-MM-DD.md`, con `estado: LISTA`. Haz commit y push.
+6. Guarda en `datos/publicaciones/AAAA-MM-DD.md`, con `estado: LISTA`:
+   - el texto final, ya escapado, bajo el encabezado exacto `## Texto final` (y nada más hasta el siguiente encabezado `## `);
+   - el JSON;
+   - la línea `imagen: <URL raw>`.
+   Haz commit y push.
+   - Si al terminar faltan menos de 10 min para la hora de publicación (o ya ha pasado), no pongas LISTA: pon `estado: SIN PUBLICAR` con el motivo "investigación no terminada a tiempo".
+7. Añade a `datos/registro.md` la entrada del PASO 5 con todo lo de la investigación y "Publicación: pendiente de la rutina de publicación". **Termina aquí. No esperes ni publiques.**
 
-## PASO 4 · Esperar y publicar
-1. Espera con `sleep` (tramos de 5 min como máximo) hasta la hora de publicación de Madrid, con un margen de 0 a 2 min después de la hora.
+## RUTINA DE PUBLICACIÓN (PASOS 4 y 5)
+Solo para la rutina de PUBLICACIÓN. No investigues ni reescribas el texto.
+
+### PASO 4.0 · Comprobaciones
+1. Ejecuta `TZ=Europe/Madrid date '+%F %u %H:%M'`. **Continúa solo si el día coincide y la hora de Madrid está entre la hora de "Publicación" y 15 min después.** Si es antes de la hora o más de 60 min después, termina en silencio (es la activación de la otra hora UTC). Si han pasado entre 15 y 60 min, registra la INCIDENCIA "rutina de publicación activada tarde: hueco sin publicar", pon `estado: SIN PUBLICAR` y termina.
+2. `git config user.name "Claude"`, `git config user.email "noreply@anthropic.com"`, `git checkout -B main origin/main && git pull origin main`.
+3. Lee `datos/publicaciones/AAAA-MM-DD.md` (fecha de HOY).
+   - Si está PUBLICADA o PUBLICANDO: termina (evita duplicados).
+   - Si no existe o está EN CURSO: la investigación no terminó. Pon `estado: SIN PUBLICAR` con el motivo "la investigación no dejó la publicación lista", añádelo al registro, haz push y termina. **Nunca publiques un borrador de reserva para cubrir el hueco.**
+   - Si está SIN PUBLICAR o INCIDENCIA: termina.
+   - Solo si está **LISTA**, continúa.
+4. Comprueba con WebFetch que la URL de la imagen (línea `imagen:`) responde. Si no responde, INCIDENCIA y no publiques.
+5. Cambia el estado a `PUBLICANDO`, haz commit y push. Si el push falla por conflicto, vuelve a hacer pull y repite la comprobación 3.
+
+### PASO 4 · Publicar
+1. Publica ya (no esperes: la rutina ya se activa a la hora).
 2. Publica con Zapier: `execute_zapier_write_action` → `linkedin_create_company_update`. Parámetros:
    - `connection_id` = `02637f23-81cb-8957-a74b-c88e37d4a469`;
    - `company_id` = `145510157`;
-   - `comment` = texto final escapado;
+   - `comment` = el texto de `## Texto final`, exactamente como está guardado;
    - `image` = URL pública raw de la imagen;
    - `image_type` = `post_media`.
 3. Llama UNA sola vez. Si falla, revisa el error, corrige y reintenta **una vez como máximo**.
@@ -158,6 +183,8 @@ Antes de elegir, lee `datos/aprendizajes.md` y las 3 últimas publicaciones de `
 Autorización del usuario: publicar la publicación de HOY sin aprobación individual, dentro de estas reglas. No publiques respuestas a comentarios, no edites ni borres publicaciones y no cambies ajustes de la página.
 
 ## PASO 5 · Registro (commit y push al final)
+La rutina de investigación escribe la entrada completa (ver PASO 3.7). La rutina de publicación solo completa las líneas "Publicación" y "Tareas de Zapier usadas hoy" de la entrada de hoy.
+
 Actualiza `datos/publicaciones/AAAA-MM-DD.md` con el estado final: PUBLICADA, SIN PUBLICAR con motivo, o INCIDENCIA.
 
 Añade a `datos/registro.md`:
