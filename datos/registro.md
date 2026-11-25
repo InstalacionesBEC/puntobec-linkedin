@@ -41,3 +41,8 @@
 - Publicación: VERIFICADA por la respuesta de Zapier (id urn:li:share:7531349357762310144, 14:33 Madrid, imagen sí). No se abrió LinkedIn.
 - Tareas de Zapier usadas hoy: 2.
 - Intervención manual necesaria: no. Nota: push directo a main funcionó.
+
+## 2026-11-25 · cambio: investigación y publicación separadas (sesión interactiva, ~14:45)
+- Motivo: el 25/11 la rutina esperó 3 h en segundo plano hasta las 14:33; la espera se cortó una vez a las ~13:38 y solo se recuperó porque la sesión se reactivó. Publicó bien (14:33:32), pero el método era frágil.
+- Ahora cada día hay dos rutinas: INVESTIGAR (hora de inicio; termina en estado LISTA, sin esperar) y PUBLICAR (hora exacta de publicación; solo publica lo que esté LISTA). Ver INSTRUCCIONES.md v3.1.
+- Primera prueba real del nuevo sistema: jueves 26/11 (investigación 12:03, publicación 15:03).

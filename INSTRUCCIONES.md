@@ -152,7 +152,7 @@ Antes de elegir, lee `datos/aprendizajes.md` y las 3 últimas publicaciones de `
 Solo para la rutina de PUBLICACIÓN. No investigues ni reescribas el texto.
 
 ### PASO 4.0 · Comprobaciones
-1. Ejecuta `TZ=Europe/Madrid date '+%F %u %H:%M'`. **Continúa solo si el día coincide y la hora de Madrid está entre la hora de "Publicación" y 15 min después.** Si es antes de la hora o más de 60 min después, termina en silencio (es la activación de la otra hora UTC). Si han pasado entre 15 y 60 min, registra la INCIDENCIA "rutina de publicación activada tarde: hueco sin publicar", pon `estado: SIN PUBLICAR` y termina.
+1. Ejecuta `TZ=Europe/Madrid date '+%F %u %H:%M'`. **Continúa solo si el día coincide y la hora de Madrid está entre la hora de "Publicación" y 15 min después.** Si es antes de la hora o han pasado más de 45 min, termina en silencio (es la activación de la otra hora UTC). Si han pasado entre 15 y 45 min, registra la INCIDENCIA "rutina de publicación activada tarde: hueco sin publicar", pon `estado: SIN PUBLICAR` y termina.
 2. `git config user.name "Claude"`, `git config user.email "noreply@anthropic.com"`, `git checkout -B main origin/main && git pull origin main`.
 3. Lee `datos/publicaciones/AAAA-MM-DD.md` (fecha de HOY).
    - Si está PUBLICADA o PUBLICANDO: termina (evita duplicados).
