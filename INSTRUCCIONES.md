@@ -66,7 +66,14 @@ Si una fuente no es accesible, anótalo y sigue sin ella. No inventes cifras. La
 **C) Regla de mínimos (obligatoria)**
 - Para publicar hacen falta **al menos 3 fuentes de actualidad de los últimos 7 días, verificadas** (fuente original o 2 resultados independientes).
 - Al menos una debe tener **interacción o debate observable** (cifras o comentarios visibles).
-- Si no se cumple, NO publiques: registra "INVESTIGACIÓN INSUFICIENTE" con el motivo y deja el hueco sin publicar.
+- **Antes de declarar la investigación insuficiente es obligatorio:**
+  - haber dedicado **al menos 30 minutos** a investigar;
+  - haber hecho **al menos 12 consultas** de WebSearch;
+  - haber abierto con WebFetch **al menos 10 candidatas**. Que una fuente aparezca solo en el buscador no basta para descartarla: ábrela.
+
+  La red del entorno tiene acceso completo, así que los medios y los estudios se pueden abrir. Si algún dominio concreto falla (por ejemplo, reddit.com), sigue con otros.
+- Una fuente cuenta como "de los últimos 7 días" si su fecha de publicación está en esa ventana. También cuenta un informe más antiguo si se ha publicado sobre él una noticia nueva dentro de la ventana.
+- Si no se cumple, NO publiques: registra "INVESTIGACIÓN INSUFICIENTE" con el motivo y con el número de consultas, de fuentes abiertas y de minutos. Deja el hueco sin publicar.
 - Nunca uses los borradores de reserva para llenar el hueco.
 
 **D) Selección**
@@ -168,7 +175,10 @@ Añade a `datos/registro.md`:
 ```
 
 ## Guardar en el repositorio
-- Al empezar, configura `git config user.name "PuntoBEC Bot"` y `git config user.email "noreply@users.noreply.github.com"`.
+- Al empezar, configura `git config user.name "Claude"` y `git config user.email "noreply@anthropic.com"`.
+- Comprueba **al principio** que puedes escribir en el repositorio: haz el commit del estado EN CURSO y el push.
+  - Si el push devuelve 403, la app de Claude en GitHub no tiene permiso de escritura. Sin repositorio no hay URL pública para la imagen, así que no se puede publicar.
+  - En ese caso, registra la INCIDENCIA "GitHub sin permiso de escritura: instalar la app Claude de GitHub en el repositorio", envía una notificación y termina sin investigar, para no gastar recursos.
 - Intenta `git push origin HEAD:main`.
 - Si el push a `main` está prohibido, usa la rama `claude/puntobec-datos`. En ese caso:
   - haz pull y push siempre en esa rama;

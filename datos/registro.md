@@ -25,3 +25,8 @@
 - Verificado desde la nube (sin publicar): Zapier + LinkedIn conectados (conexión "Ciprian Corneliu Bec"); PuntoBEC (145510157) seleccionable; lectura de publicaciones y estadísticas de PuntoBEC por API GET funciona (0 publicaciones); raw.githubusercontent.com accesible; www.linkedin.com NO accesible desde la nube (falta permitirlo en la red del entorno).
 - Las 7 publicaciones programadas en LinkedIn ya se habían cancelado. Instrucciones v3 (nube) en INSTRUCCIONES.md.
 - 24/11 ~17:10: LinkedIn devuelve 403 a la nube. El usuario elige el MODO GRATUITO: investigación con noticias y estudios verificados y conversación pública (HN, Reddit…), sin análisis de publicaciones de LinkedIn de terceros. Instrucciones actualizadas.
+
+## 2026-11-24 (martes) · inicio 19:31 → publicación 22:31 · NUBE · SIN PUBLICAR
+- Causas: (1) la rutina no pudo escribir en GitHub (403: la app Claude de GitHub no tiene permiso de escritura en el repositorio), así que no había URL pública para la imagen; (2) declaró la investigación insuficiente en 98 s, con 1 fuente verificada (HN "burnout from agentic coding", 7 puntos y 9 comentarios), sin abrir otras candidatas de noviembre de 2026 que tenía en el buscador.
+- Corrección (25/11, sesión interactiva): investigación mínima obligatoria (30 min, 12 consultas, 10 fuentes abiertas) antes de declararla insuficiente, y comprobación de escritura en GitHub al empezar. Pendiente: instalar la app Claude de GitHub en el repositorio.
+- Zapier: 0 tareas usadas.
