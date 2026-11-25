@@ -25,7 +25,7 @@ import os, glob
 
 def _primera(*cands):
     for c in cands:
-        hits = glob.glob(c)
+        hits = glob.glob(c, recursive=True)
         if hits:
             return hits[0]
     return None
