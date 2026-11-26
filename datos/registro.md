@@ -57,3 +57,9 @@
 - Publicación: VERIFICADA por respuesta de Zapier (lifecycleState PUBLISHED, autor organización 145510157, imagen sí, texto íntegro), urn:li:share:7531719758694666240, hacia las 15:05 Madrid. Primer intento falló con "Could not find entity"; el reintento (único) funcionó.
 - Tareas de Zapier usadas hoy: 2 (la llamada fallida no debería consumir).
 - Intervención manual necesaria: no. Limitación: debate observable de una sola fuente (HN); el reloj del entorno marcó solo unos minutos de investigación.
+
+## 2026-11-26 · incidencia: publicación DUPLICADA (revisión en sesión interactiva)
+- La rutina de publicación (15:04) llamó a Zapier; la primera llamada devolvió el error "Could not find entity" pero la publicación SÍ salió. El reintento (15:05) creó una segunda publicación idéntica (urn:li:share:7531719758694666240). La rutina de investigación no publicó nada.
+- Corrección: tras un error de Zapier ya no se reintenta a ciegas; primero se comprueba con un GET si la publicación existe (INSTRUCCIONES.md PASO 4.3). Si no se puede comprobar, no se reintenta.
+- Las rutinas de investigación ya no tienen el conector de Zapier (no pueden publicar).
+- El duplicado lo borra el usuario a mano (las rutinas no borran publicaciones).

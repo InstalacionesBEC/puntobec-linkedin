@@ -170,8 +170,12 @@ Solo para la rutina de PUBLICACIÓN. No investigues ni reescribas el texto.
    - `comment` = el texto de `## Texto final`, exactamente como está guardado;
    - `image` = URL pública raw de la imagen;
    - `image_type` = `post_media`.
-3. Llama UNA sola vez. Si falla, revisa el error, corrige y reintenta **una vez como máximo**.
-   - Si vuelve a fallar, NO publiques sin imagen: registra la INCIDENCIA y deja el hueco.
+3. Llama UNA sola vez. **Un error de Zapier NO significa que no se haya publicado** (el 26/11 la primera llamada devolvió "Could not find entity", pero la publicación sí salió; el reintento creó un DUPLICADO).
+   - Si la llamada devuelve error o no responde, **NO reintentes directamente**. Primero comprueba si ya está publicada: una sola llamada a `linkedin_make_api_get_request` GET `https://api.linkedin.com/rest/posts?q=author&author=urn%3Ali%3Aorganization%3A145510157&count=5` con la cabecera `LinkedIn-Version: 202610`.
+   - Si alguna publicación de los últimos 30 min empieza con las mismas primeras palabras del texto final: **ya está publicada**. No reintentes. Guarda su id y pasa a verificar.
+   - Solo si el GET responde bien y NO aparece la publicación, reintenta **una vez como máximo**.
+   - Si el GET también falla (o no se puede saber si se publicó), **NO reintentes**: registra la INCIDENCIA "no se sabe si se publicó; revisar a mano" y avisa. Es preferible un hueco a un duplicado.
+   - Si el reintento falla, NO publiques sin imagen: registra la INCIDENCIA y deja el hueco.
    - Nunca publiques fuera de la hora (más de 15 min tarde): registra la incidencia.
 4. **Verifica:**
    - Guarda el id o la URL que devuelva Zapier.
