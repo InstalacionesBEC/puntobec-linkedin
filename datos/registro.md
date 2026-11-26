@@ -54,6 +54,6 @@
 - Enfoque original de PuntoBEC: definir antes de la crisis una señal de parada y un plan de cobertura, sobre todo para quien trabaja por su cuenta; sin experiencias inventadas.
 - Conversación que se busca provocar: qué permitió o habría permitido parar a tiempo sin culpa.
 - Imagen: estilo comparacion, tema oscuro, https://raw.githubusercontent.com/InstalacionesBEC/puntobec-linkedin/main/datos/graficos/2026-11-26.png (URL comprobada).
-- Publicación: pendiente de la rutina de publicación.
-- Tareas de Zapier usadas hoy: 0.
+- Publicación: VERIFICADA por respuesta de Zapier (lifecycleState PUBLISHED, autor organización 145510157, imagen sí, texto íntegro), urn:li:share:7531719758694666240, hacia las 15:05 Madrid. Primer intento falló con "Could not find entity"; el reintento (único) funcionó.
+- Tareas de Zapier usadas hoy: 2 (la llamada fallida no debería consumir).
 - Intervención manual necesaria: no. Limitación: debate observable de una sola fuente (HN); el reloj del entorno marcó solo unos minutos de investigación.
