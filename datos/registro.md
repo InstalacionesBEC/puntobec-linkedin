@@ -46,3 +46,14 @@
 - Motivo: el 25/11 la rutina esperó 3 h en segundo plano hasta las 14:33; la espera se cortó una vez a las ~13:38 y solo se recuperó porque la sesión se reactivó. Publicó bien (14:33:32), pero el método era frágil.
 - Ahora cada día hay dos rutinas: INVESTIGAR (hora de inicio; termina en estado LISTA, sin esperar) y PUBLICAR (hora exacta de publicación; solo publica lo que esté LISTA). Ver INSTRUCCIONES.md v3.1.
 - Primera prueba real del nuevo sistema: jueves 26/11 (investigación 12:03, publicación 15:03).
+
+## 2026-11-26 (jueves) · inicio 12:03 → publicación 15:03 (Madrid) · NUBE
+- Fuentes consultadas: 19 consultas de búsqueda; ~30 fuentes abiertas (detalle en investigacion/2026-11-26.md). Verificadas: Deloitte Encuesta Global 2026 Gen Z y millennials (PDF original; noticia El Economista 26/11), Anthropic "Working with AI" 23/11 (original), Lyra Health 2026 con noticia diario.mx 21/11. Conversación: Hacker News "Why aren't we working 2-days a week?" 62 puntos y 84 comentarios, "Working with AI" 89 puntos y 76 comentarios (captura 26/11 ~11:05 UTC). Reddit y fastcompany bloqueados. Sin análisis de publicaciones de LinkedIn de terceros (modo gratuito).
+- Ventana: ampliada a 7 días (19-26/11): el buscador devuelve poco material de 24-48 h; se aceptan informes anteriores con noticia nueva en la ventana.
+- Tema: necesitar parar vs poder parar (Deloitte 71% vs 41%). Puntuación 21/25 (frente a 19, 19 y 15).
+- Enfoque original de PuntoBEC: definir antes de la crisis una señal de parada y un plan de cobertura, sobre todo para quien trabaja por su cuenta; sin experiencias inventadas.
+- Conversación que se busca provocar: qué permitió o habría permitido parar a tiempo sin culpa.
+- Imagen: estilo comparacion, tema oscuro, https://raw.githubusercontent.com/InstalacionesBEC/puntobec-linkedin/main/datos/graficos/2026-11-26.png (URL comprobada).
+- Publicación: pendiente de la rutina de publicación.
+- Tareas de Zapier usadas hoy: 0.
+- Intervención manual necesaria: no. Limitación: debate observable de una sola fuente (HN); el reloj del entorno marcó solo unos minutos de investigación.
