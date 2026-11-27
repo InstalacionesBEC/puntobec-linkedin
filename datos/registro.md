@@ -63,3 +63,14 @@
 - Corrección: tras un error de Zapier ya no se reintenta a ciegas; primero se comprueba con un GET si la publicación existe (INSTRUCCIONES.md PASO 4.3). Si no se puede comprobar, no se reintenta.
 - Las rutinas de investigación ya no tienen el conector de Zapier (no pueden publicar).
 - El duplicado lo borra el usuario a mano (las rutinas no borran publicaciones).
+
+## 2026-11-27 (viernes) · inicio 12:39 → publicación 15:38 (Madrid) · NUBE
+- Fuentes consultadas: 14 consultas de WebSearch + consultas a la API de Hacker News; 11 fuentes abiertas (detalle en investigacion/2026-11-27.md). Verificada en fuente original: Gallup, engagement EE. UU. T3 2026 (28/10/2026; noticia nueva Journal of Accountancy 06/11). Otras: OCU 13/11 (original), BBVA Research 16/11 (original). Conversación: Hacker News "Ask HN: unemployed 2y" 754 puntos y 867 comentarios; "Buy Nothing Day" 120 puntos y 24 comentarios; "AI hype cooling" 37 puntos y 27 comentarios (captura 27/11 ~11:40 UTC). Reddit no consultado; Fast Company 403. Sin análisis de publicaciones de LinkedIn de terceros (modo gratuito).
+- Ventana: ampliada a 7 días (20-27/11): el buscador devuelve poco material de 24-48 h.
+- Tema: compromiso laboral 29% (Gallup) con ángulo autónomo. Puntuación 18/25 (frente a 17, 16, 12 y 10). Aviso: el debate observable es de temas relacionados (HN), no de este dato; el hilo de desempleo (867 comentarios) no se eligió por falta de dato verificable y encaje.
+- Enfoque original de PuntoBEC: reunión semanal contigo mismo para fijar expectativas y revisar energía cuando no hay jefe; sin experiencias inventadas.
+- Conversación que se busca provocar: qué hábito sustituye al jefe en quien trabaja solo.
+- Imagen: estilo dato, tema claro, https://raw.githubusercontent.com/InstalacionesBEC/puntobec-linkedin/main/datos/graficos/2026-11-27.png (URL comprobada, 200).
+- Publicación: pendiente de la rutina de publicación.
+- Tareas de Zapier usadas hoy: 0 (investigación).
+- Intervención manual necesaria: no. Desviación: el reloj registró menos de 30 min de investigación (se cumplieron consultas y fuentes mínimas).
