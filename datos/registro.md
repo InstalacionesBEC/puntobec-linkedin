@@ -71,6 +71,6 @@
 - Enfoque original de PuntoBEC: reunión semanal contigo mismo para fijar expectativas y revisar energía cuando no hay jefe; sin experiencias inventadas.
 - Conversación que se busca provocar: qué hábito sustituye al jefe en quien trabaja solo.
 - Imagen: estilo dato, tema claro, https://raw.githubusercontent.com/InstalacionesBEC/puntobec-linkedin/main/datos/graficos/2026-11-27.png (URL comprobada, 200).
-- Publicación: pendiente de la rutina de publicación.
-- Tareas de Zapier usadas hoy: 0 (investigación).
+- Publicación: VERIFICADA (urn:li:share:7532090554751381504, https://www.linkedin.com/feed/update/urn:li:share:7532090554751381504/, 15:38 Madrid, imagen sí; lifecycle PUBLISHED, autor PuntoBEC).
+- Tareas de Zapier usadas hoy: 2 (una publicación).
 - Intervención manual necesaria: no. Desviación: el reloj registró menos de 30 min de investigación (se cumplieron consultas y fuentes mínimas).
