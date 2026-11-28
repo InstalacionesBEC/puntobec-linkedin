@@ -85,3 +85,6 @@
 - Publicación: pendiente de la rutina de publicación.
 - Tareas de Zapier usadas hoy: 0.
 - Intervención manual necesaria: no. Desviación: el reloj registró menos de 30 min de investigación (se cumplieron consultas y fuentes mínimas).
+- Publicación 28/11 (rutina de publicación): INCIDENCIA. Zapier devolvió "Could not find entity" y el GET de comprobación "No virtual resource found". No se sabe si se publicó; revisar a mano. Sin reintento.
+- Tareas de Zapier usadas hoy: desconocido (1 escritura con error, 1 lectura con error).
+- Intervención manual necesaria: sí (comprobar la página PuntoBEC).
