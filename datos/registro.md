@@ -74,3 +74,14 @@
 - Publicación: VERIFICADA (urn:li:share:7532090554751381504, https://www.linkedin.com/feed/update/urn:li:share:7532090554751381504/, 15:38 Madrid, imagen sí; lifecycle PUBLISHED, autor PuntoBEC).
 - Tareas de Zapier usadas hoy: 2 (una publicación).
 - Intervención manual necesaria: no. Desviación: el reloj registró menos de 30 min de investigación (se cumplieron consultas y fuentes mínimas).
+
+## 2026-11-28 (sábado) · inicio 08:11 → publicación 11:00 (Madrid) · NUBE
+- Fuentes consultadas: 16 consultas de WebSearch; 21 fuentes abiertas (detalle en investigacion/2026-11-28.md). Verificada en fuente original: OCU Black Friday 2026 (13/11; noticias nuevas 23-24/11). Otras: Idealo (16/11, vía prensa), NaviBlack 24/11, ISS 26/11 (secundarias). Conversación: Hacker News "Buy Nothing Day" 348 puntos y 111 comentarios (captura 28/11 ~07:15 UTC). Reddit no consultado; gallup.com 404. Sin análisis de publicaciones de LinkedIn de terceros (modo gratuito).
+- Ventana: ampliada a 7 días (21-28/11): el buscador devuelve poco material de 24-48 h.
+- Tema: Black Friday, impulso vs criterio previo de compra (OCU 36% compras por impulso). Puntuación 20/25 (frente a 12, 11 y 10).
+- Enfoque original de PuntoBEC: regla de espera de 24 h y una línea escrita (problema, ahorro, alternativa) antes de comprar para el negocio; sin experiencias inventadas.
+- Conversación que se busca provocar: qué regla usa el autónomo para decidir compras del negocio sin que la oferta decida.
+- Imagen: estilo comparacion, tema oscuro, https://raw.githubusercontent.com/InstalacionesBEC/puntobec-linkedin/main/datos/graficos/2026-11-28.png (URL comprobada, 200).
+- Publicación: pendiente de la rutina de publicación.
+- Tareas de Zapier usadas hoy: 0.
+- Intervención manual necesaria: no. Desviación: el reloj registró menos de 30 min de investigación (se cumplieron consultas y fuentes mínimas).
